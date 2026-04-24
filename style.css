@@ -194,16 +194,16 @@ header.scrolled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 4px;
-  transition: var(--transition);
   cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 2px;
+  transition: var(--transition);
   border: none;
-  font-size: 0.95rem;
 }
 
 .btn-primary {
@@ -570,8 +570,8 @@ header.scrolled .hamburger span {
 
 /* Menu Page Styles */
 .page-header {
-  height: 50vh;
-  min-height: 400px;
+  height: 100vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -579,6 +579,7 @@ header.scrolled .hamburger span {
   position: relative;
   background-color: var(--dark);
   margin-bottom: 4rem;
+  overflow: hidden;
 }
 
 .page-header-bg {
@@ -588,17 +589,30 @@ header.scrolled .hamburger span {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.5;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
 }
 
 .page-title {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .page-title h1 {
   color: var(--light);
   margin-bottom: 1rem;
+}
+
+.page-title p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.2rem;
 }
 
 .menu-categories {
