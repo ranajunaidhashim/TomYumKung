@@ -96,6 +96,7 @@ section {
   padding: var(--section-padding);
 }
 
+
 /* Header & Nav */
 header {
   position: fixed;
@@ -124,7 +125,7 @@ header.scrolled {
 .logo {
   font-family: var(--font-heading);
   font-size: 2rem;
-  color: var(--light);
+  color: var(--accent-light);
   font-weight: 700;
   letter-spacing: 1px;
   display: flex;
@@ -826,7 +827,7 @@ footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .footer-about .logo {
@@ -958,12 +959,17 @@ footer {
     margin: 0;
   }
 
+  section {
+    padding: 1rem !important;
+  }
+
   .hero-btns {
     flex-direction: column;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+    margin-bottom: 0;
   }
 
   .menu-list {
@@ -972,5 +978,9 @@ footer {
 
   .exp-content {
     padding: 2rem;
+  }
+
+  .about-grid {
+    gap: 1rem;
   }
 }
